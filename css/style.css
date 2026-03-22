@@ -9,12 +9,13 @@
 
 a {
 	text-decoration: none;
+	color: #111;
 }
 a:hover {
 	text-decoration: none;
 }
 a:visited {
-	color: inherit;
+	
 }
 ul {
 	list-style: none;
@@ -92,22 +93,23 @@ body {
 .menu-item {
 	align-self: center;
 	text-transform: uppercase;
-	transition: 0.2s all ease-in-out;
-	color: #111;
+	transition: 0.2s all ease-out;
+	
 }
 .menulink {
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 1.2;
 	transition: 0.3s all ease-in-out;
-	
-}
-.menu-item:hover {
-	color: var(--primary-color);
+	color: #111;
 }
 .menulink:visited{
-	color: inherit;
+	color: #222222;
 }
+.menulink:hover {
+	color: var(--primary-color);
+}
+
 /* burger */
 .burger {
   display: none;
