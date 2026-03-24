@@ -33,6 +33,7 @@ button {
 	--bg-color: #f7f7f7;;
 	--title-color: #010d28;
 	--primary-color: #4f8ff0;
+	--dark-blue-color: #3d5990
 }
 
 html {
@@ -144,6 +145,7 @@ body {
     transition: transform 0.3s ease;
 	border-radius: 8px;
 	display: none;
+	z-index: 100;
   }
 
  
@@ -155,7 +157,9 @@ body {
     padding: 20px;
 	color: #ebebeb;
   }
-
+  .menulink:visited {
+	color: #ffffff;
+  }
   .menu.active {
     transform: translateX(0);
 	 display:initial;
@@ -646,7 +650,7 @@ footer {
 
 .footer-logo {
 	max-width: 120px;
-	filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+	filter: invert(1) sepia(1) saturate(1) hue-rotate(175deg);
 	transition: all ease-in-out 0.3s;
 }
 .footer-logo:hover {
@@ -708,6 +712,11 @@ footer {
 }
 /* адаптив телефон */
 @media screen and (max-width: 576px){
+	.header-hero {
+	
+	background-attachment: unset;
+
+}
 	.box-wrap {
 		flex-direction: column;
 		
@@ -842,6 +851,9 @@ margin-bottom: 16px;
   opacity: 1;
   transform: translateY(0);
 }
-
+.accordion-item.active .accordion-header{
+	background-color: var(--dark-blue-color);
+	color: #ffff;
+}
 
 /* ___Услуги консалтинг */
