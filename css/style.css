@@ -17,7 +17,7 @@ a:hover {
 a:visited {
 	
 }
-ul {
+ul, ol {
 	list-style: none;
 }
 button {
@@ -754,3 +754,94 @@ margin-left: 50px;
 margin-bottom: 20px;
 }
 /* _____политика приватности */
+
+
+/* Услуги консалтинг____ */
+.header-bg {
+	background-color: #dddcdc;
+}
+.breadcrumb {
+	padding: 30px 0px;
+}
+.breadcrumb ol {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  content: ">";
+  margin-left: 5px;
+  color: #000000;
+}
+.breadcrumb li {
+	text-transform: lowercase;
+	color:#707682;
+	font-size: 14px;
+}
+
+.breadcrumb li > a {
+	color: var(--primary-color);
+}
+
+.accordion-item {
+margin-bottom: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+.accordion-item:hover {
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+ }
+
+.accordion-header {
+	width: 100%;
+  padding: 22px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-title {
+}
+.accordion-icon {
+	width: 18px;
+  height: 18px;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+.accordion-item.active .accordion-icon {
+  transform: rotate(-135deg);
+}
+.accordion-body {
+	height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  
+}
+.accordion-inner {
+  padding: 0 24px 20px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.accordion-item.active .accordion-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ___Услуги консалтинг */
