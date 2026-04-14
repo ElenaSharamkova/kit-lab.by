@@ -821,6 +821,10 @@ footer {
 .card::before {
 	display: none;
 }
+.about-wrap {
+	flex-direction: column;
+	gap: 20px;
+}
 .footer-contact {
 		flex-direction: column;
 		gap: 10px;
