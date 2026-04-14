@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPhoneMask();
   initScrollTop();
   initAccordion();
+  initSlider();
 });
 
 
@@ -17,12 +18,6 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
-// document.addEventListener("click", (event) => {
-//   if (!burger.contains(event.target) && !menu.contains(event.target)) {
-//     burger.classList.remove("active");
-//     menu.classList.remove("active");
-//   }
-// });
 }
 
 function initPhoneMask() {
@@ -64,18 +59,148 @@ function initScrollTop() {
 }
 
 
-// отправка формы
-document.getElementById("contactForm")
-  ?.addEventListener("submit", function (e) {
-    e.preventDefault();
+function initSlider() {
+  const sliderElement = document.querySelector('.slider');
+  if (!sliderElement) return;
 
-    document.getElementById("formStatus").innerText =
-      "Заявка отправлена. Мы свяжемся с вами.";
-
-    this.reset();
+  new Slider(sliderElement, {
+    interval: 4000
   });
+}
+class Slider {
+  constructor(root, options = {}) {
+    this.root = root;
 
+    this.slides = root.querySelectorAll('.slide');
+    this.nextBtn = root.querySelector('.next');
+    this.prevBtn = root.querySelector('.prev');
+    this.dotsContainer = root.querySelector('.dots');
+    this.slidesWrapper = root.querySelector('.slides');
 
+    this.index = 0;
+    this.intervalTime = options.interval || 3000;
+    this.timer = null;
+
+    this.startX = 0;
+    this.endX = 0;
+
+    this.init();
+  }
+
+  init() {
+    if (!this.slides.length) return;
+
+    this.createDots();
+    this.update();
+    this.bindEvents();
+    this.startAuto();
+  }
+
+  // ===== dots =====
+  createDots() {
+    this.dots = [];
+
+    this.slides.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+
+      if (i === 0) dot.classList.add('active');
+
+      dot.addEventListener('click', () => {
+        this.goTo(i);
+        this.restartAuto();
+      });
+
+      this.dotsContainer.appendChild(dot);
+      this.dots.push(dot);
+    });
+  }
+
+  // ===== обновление (transform вместо opacity) =====
+  update() {
+    const offset = -this.index * 100;
+    this.slidesWrapper.style.transform = `translateX(${offset}%)`;
+
+    this.dots.forEach(d => d.classList.remove('active'));
+    this.dots[this.index].classList.add('active');
+  }
+
+  // ===== навигация =====
+  next() {
+    this.index = (this.index + 1) % this.slides.length;
+    this.update();
+  }
+
+  prev() {
+    this.index = (this.index - 1 + this.slides.length) % this.slides.length;
+    this.update();
+  }
+
+  goTo(i) {
+    this.index = i;
+    this.update();
+  }
+
+  // ===== автопрокрутка (без дергания) =====
+  startAuto() {
+    this.stopAuto();
+
+    this.timer = setTimeout(() => {
+      this.next();
+      this.startAuto();
+    }, this.intervalTime);
+  }
+
+  stopAuto() {
+    clearTimeout(this.timer);
+  }
+
+  restartAuto() {
+    this.stopAuto();
+    this.startAuto();
+  }
+
+  // ===== свайп =====
+  onTouchStart(e) {
+    this.startX = e.touches[0].clientX;
+    this.stopAuto();
+  }
+
+  onTouchMove(e) {
+    this.endX = e.touches[0].clientX;
+  }
+
+  onTouchEnd() {
+    const diff = this.startX - this.endX;
+
+    if (diff > 50) this.next();
+    if (diff < -50) this.prev();
+
+    this.startAuto();
+  }
+
+  // ===== события =====
+  bindEvents() {
+    this.nextBtn?.addEventListener('click', () => {
+      this.next();
+      this.restartAuto();
+    });
+
+    this.prevBtn?.addEventListener('click', () => {
+      this.prev();
+      this.restartAuto();
+    });
+
+    // hover
+    this.root.addEventListener('mouseenter', () => this.stopAuto());
+    this.root.addEventListener('mouseleave', () => this.startAuto());
+
+    // touch
+    this.root.addEventListener('touchstart', (e) => this.onTouchStart(e));
+    this.root.addEventListener('touchmove', (e) => this.onTouchMove(e));
+    this.root.addEventListener('touchend', () => this.onTouchEnd());
+  }
+}
 
 //Аккордеон
 function initAccordion() {
