@@ -545,6 +545,7 @@ legend {
 	text-transform: uppercase;
 	padding: 10px 10px;
 	transition: all 0.2s ease-in-out;
+	border-radius: 4px;
 }
 .btn-form:hover {
 	background-color: var(--txt-color);
@@ -593,12 +594,11 @@ flex-direction: column;
 margin-bottom: 10px;
 }
 .news-img {
-	/* max-width: 150px; */
+	height: 200px;
 	width: 100%;
 	object-fit: cover;
 	border-radius: 6px;
 	margin-bottom: 10px;
-	flex: 0;
 }
 
 .news-title {
@@ -608,7 +608,7 @@ margin-bottom: 10px;
 }
 .news-text {
 	display: -webkit-box;
-  -webkit-line-clamp: 4; /* Количество строк */
+  -webkit-line-clamp: 3; /* Количество строк */
   -webkit-box-orient: vertical;
   overflow: hidden; /* Скрывает лишний текст */
   
@@ -859,7 +859,7 @@ margin-bottom: 20px;
 /* _____политика приватности */
 
 
-/* Услуги консалтинг____ */
+/* Страницы услуг____ */
 .header-bg {
 	/* background-color: #2d467841; */
 	border-bottom: 1px solid var(--primary-color);
@@ -1020,21 +1020,23 @@ margin-bottom: 16px;
 .accordion-link::after {
 	 content: '';
 	 position: absolute;
-	display: inline-block;
-	width: 40px;
+	/* display: inline-block; */
+	width: 70px;
 	height: 40px;
-	background-image: url(../img/icons/finger.png);
+	background-image: url(../img/icons/whale1.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center; 
-	top:85%;
-	left: 70%;
+    top: -10%;
+    left: 90%;
+    opacity: 0;
+	 transition: all 0.3s ease-in-out;
 }
 .accordion-link:hover {
 	transform: translateY(-3px);
 }
 .accordion-link:hover::after {
-	
-	transform: translateY(-2px);
+	opacity: 1;
+	transform: translateY(-30%);
 }
 /* ___Услуги консалтинг */

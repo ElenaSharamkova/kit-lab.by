@@ -116,7 +116,7 @@ class Slider {
     });
   }
 
-  // ===== обновление (transform вместо opacity) =====
+  // ===== обновление =====
   update() {
     const offset = -this.index * 100;
     this.slidesWrapper.style.transform = `translateX(${offset}%)`;
@@ -141,7 +141,7 @@ class Slider {
     this.update();
   }
 
-  // ===== автопрокрутка (без дергания) =====
+  // ===== автопрокрутка =====
   startAuto() {
     this.stopAuto();
 
