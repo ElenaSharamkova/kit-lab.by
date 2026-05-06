@@ -6,26 +6,26 @@ document.addEventListener("DOMContentLoaded", () => {
   initSlider();
 });
 
+function initBurger() {
+  //Бургер меню
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+  const body = document.querySelector("body");
+  if (!burger || !menu) return;
 
-function  initBurger() {
-	//Бургер меню
-const burger = document.getElementById("burger");
-const menu = document.getElementById("menu");
-if (!burger || !menu) return;
-
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  menu.classList.toggle("active");
-});
-
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    menu.classList.toggle("active");
+    body.classList.toggle("no-scroll");
+  });
 }
 
 function initPhoneMask() {
-//Проверка телефона
-const phoneInput = document.getElementById("phone");
-if (!phoneInput) return;
+  //Проверка телефона
+  const phoneInput = document.getElementById("phone");
+  if (!phoneInput) return;
 
-phoneInput.addEventListener("input", function (e) {
+  phoneInput.addEventListener("input", function (e) {
     let x = e.target.value.replace(/\D/g, "").substring(0, 12);
 
     let formatted = "+375";
@@ -48,9 +48,7 @@ function initScrollTop() {
     const windowHeight = window.innerHeight;
 
     btn.style.display =
-      window.scrollY > 300 && footerPosition > windowHeight
-        ? "block"
-        : "none";
+      window.scrollY > 300 && footerPosition > windowHeight ? "block" : "none";
   });
 
   btn.addEventListener("click", () => {
@@ -58,24 +56,23 @@ function initScrollTop() {
   });
 }
 
-
 function initSlider() {
-  const sliderElement = document.querySelector('.slider');
+  const sliderElement = document.querySelector(".slider");
   if (!sliderElement) return;
 
   new Slider(sliderElement, {
-    interval: 4000
+    interval: 4000,
   });
 }
 class Slider {
   constructor(root, options = {}) {
     this.root = root;
 
-    this.slides = root.querySelectorAll('.slide');
-    this.nextBtn = root.querySelector('.next');
-    this.prevBtn = root.querySelector('.prev');
-    this.dotsContainer = root.querySelector('.dots');
-    this.slidesWrapper = root.querySelector('.slides');
+    this.slides = root.querySelectorAll(".slide");
+    this.nextBtn = root.querySelector(".next");
+    this.prevBtn = root.querySelector(".prev");
+    this.dotsContainer = root.querySelector(".dots");
+    this.slidesWrapper = root.querySelector(".slides");
 
     this.index = 0;
     this.intervalTime = options.interval || 3000;
@@ -101,12 +98,12 @@ class Slider {
     this.dots = [];
 
     this.slides.forEach((_, i) => {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
 
-      if (i === 0) dot.classList.add('active');
+      if (i === 0) dot.classList.add("active");
 
-      dot.addEventListener('click', () => {
+      dot.addEventListener("click", () => {
         this.goTo(i);
         this.restartAuto();
       });
@@ -121,8 +118,8 @@ class Slider {
     const offset = -this.index * 100;
     this.slidesWrapper.style.transform = `translateX(${offset}%)`;
 
-    this.dots.forEach(d => d.classList.remove('active'));
-    this.dots[this.index].classList.add('active');
+    this.dots.forEach((d) => d.classList.remove("active"));
+    this.dots[this.index].classList.add("active");
   }
 
   // ===== навигация =====
@@ -181,59 +178,59 @@ class Slider {
 
   // ===== события =====
   bindEvents() {
-    this.nextBtn?.addEventListener('click', () => {
+    this.nextBtn?.addEventListener("click", () => {
       this.next();
       this.restartAuto();
     });
 
-    this.prevBtn?.addEventListener('click', () => {
+    this.prevBtn?.addEventListener("click", () => {
       this.prev();
       this.restartAuto();
     });
 
     // hover
-    this.root.addEventListener('mouseenter', () => this.stopAuto());
-    this.root.addEventListener('mouseleave', () => this.startAuto());
+    this.root.addEventListener("mouseenter", () => this.stopAuto());
+    this.root.addEventListener("mouseleave", () => this.startAuto());
 
     // touch
-    this.root.addEventListener('touchstart', (e) => this.onTouchStart(e));
-    this.root.addEventListener('touchmove', (e) => this.onTouchMove(e));
-    this.root.addEventListener('touchend', () => this.onTouchEnd());
+    this.root.addEventListener("touchstart", (e) => this.onTouchStart(e));
+    this.root.addEventListener("touchmove", (e) => this.onTouchMove(e));
+    this.root.addEventListener("touchend", () => this.onTouchEnd());
   }
 }
 
 //Аккордеон
 function initAccordion() {
-document.addEventListener("click", (e) => {
-  const header = e.target.closest(".accordion-header");
-  if (!header) return;
+  document.addEventListener("click", (e) => {
+    const header = e.target.closest(".accordion-header");
+    if (!header) return;
 
-  const item = header.closest(".accordion-item");
-  const body = item.querySelector(".accordion-body");
+    const item = header.closest(".accordion-item");
+    const body = item.querySelector(".accordion-body");
 
-  const isOpen = item.classList.contains("active");
+    const isOpen = item.classList.contains("active");
 
-  // закрыть все
-  document.querySelectorAll(".accordion-item").forEach((i) => {
-    i.classList.remove("active");
-    const b = i.querySelector(".accordion-body");
-    b.style.height = b.scrollHeight + "px"; // фиксируем
-    requestAnimationFrame(() => {
-      b.style.height = "0px";
+    // закрыть все
+    document.querySelectorAll(".accordion-item").forEach((i) => {
+      i.classList.remove("active");
+      const b = i.querySelector(".accordion-body");
+      b.style.height = b.scrollHeight + "px"; // фиксируем
+      requestAnimationFrame(() => {
+        b.style.height = "0px";
+      });
     });
+
+    // открыть текущий
+    if (!isOpen) {
+      item.classList.add("active");
+
+      body.style.height = "auto";
+      const height = body.scrollHeight + "px";
+      body.style.height = "0px";
+
+      requestAnimationFrame(() => {
+        body.style.height = height;
+      });
+    }
   });
-
-  // открыть текущий
-  if (!isOpen) {
-    item.classList.add("active");
-
-    body.style.height = "auto";
-    const height = body.scrollHeight + "px";
-    body.style.height = "0px";
-
-    requestAnimationFrame(() => {
-      body.style.height = height;
-    });
-  }
-});
 }

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<header class="header header-bg">
+		<div class="container">
+			<div class="header-wrapper">
+				<a href="index.html" class="header-logo">
+					<img class="logo-img" src="./img/logo.png" alt="КИТ-лаб">
+				</a>
+				<button class="burger" id="burger" aria-label="Открыть меню">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="menu" id="menu">
+					<ul class="menu-list">
+						<li class="menu-item"><a href="#about" class="menulink">О нас</a></li>
+						<li class="menu-item"><a href="#area" class="menulink">Услуги</a></li>
+						<li class="menu-item"><a href="#news" class="menulink">Новости</a></li>
+						<li class="menu-item"><a href="index.html#contact" class="menulink">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="wrap">
+		<main class="main">
+			<div class="container">
+				<nav aria-label="breadcrumb" class="breadcrumb">
+					<ol>
+						<li><a href="index.html">главная</a></li>
+						<li><a href="novosti.html">новости</a></li>
+						<li><span aria-current="page">Почему лаборатории теряют аккредитацию: неочевидные причины</span></li>
+					</ol>
+				</nav>
+				<article class="article">
+					<header class="article__header">
+						<h1 class="article__title">
+							Почему лаборатории теряют аккредитацию: неочевидные причины
+						</h1>
+					</header>
+
+					<section class="article__section img-box">
+						<div class="article-img-wrap">
+							<p class="article__text">Приостановление аккредитации редко происходит «внезапно».
+В большинстве случаев это закономерный результат накопленных системных проблем.
+Ключевой момент:
+орган по аккредитации фиксирует не отдельные ошибки, а несоответствие системы в целом.
+Что реально происходит в лабораториях
+На практике основная проблема — разрыв между тем, что написано в документах, и тем, как реально выполняются процессы.</p>
+<p class="article__text">Это проявляется в типовых ситуациях:</p>
+							<ul class="article__list">
+								<li class="article__list-item">процедуры описаны, но не применяются;</li>
+								<li class="article__list-item">действия персонала не соответствуют установленным правилам; </li>
+								<li class="article__list-item">протоколы оформляются с отклонениями; </li>
+								<li class="article__list-item">результаты не анализируются. </li>
+							</ul>
+							<p class="article__highlight">
+								Формально система есть, фактически — не работает.
+							</p>
+						</div>
+						<img class="article-img" src="img/news/2.jpg" alt="">
+					</section>
+
+					<hr class="article__divider">
+
+					<section class="article__section">
+						<h2 class="article__subtitle">Где это фиксируется по ГОСТ ISO/IEC 17025</h2>
+
+						<div class="article__block">
+							<p class="article__text-subtitle">Такие несоответствия напрямую связаны с требованиями стандарта:</p>
+							<ul class="article__list">
+								<li class="article__list-item">п. 7.5 — технические записи (ошибки в протоколах); </li>
+								<li class="article__list-item">п. 7.6 — оценка неопределенности (отсутствие обоснований); </li>
+								<li class="article__list-item">п. 7.7 — обеспечение качества результатов (формальный подход к ППК);</li>
+								<li class="article__list-item">п. 8.7 — корректирующие действия (неэффективность);</li>
+								<li class="article__list-item">п. 8.8 — внутренние аудиты (формальный характер). </li>
+							</ul>
+							<p class="article__highlight">В большинстве случаев замечания затрагивают сразу несколько пунктов.</p>
+						</div>
+
+						<div class="article__block">
+							<h3 class="article__subheading"> Где это становится критичным: этап подачи документов</h3>
+							<p class="article__text-subtitle">Один из наименее очевидных, но системных провалов — этап подачи документов на аккредитацию или подтверждение компетентности.
+Что происходит на практике:</p>
+							<ul class="article__list">
+								<li class="article__list-item">документы формируются «под подачу», а не из реальной системы; </li>
+								<li class="article__list-item">процедуры описываются корректно, но не проверяется их применимость; </li>
+								<li class="article__list-item">область аккредитации заявляется без фактического обеспечения;</li>
+								<li class="article__list-item">несоответствия внутри системы не выявлены до подачи. </li>
+							</ul>
+							<p class="article__text-subtitle">В результате: 	в заявке фиксируется «идеальная модель», а при проверке оценивается реальная работа 
+</p>
+
+							<p class="article__highlight">И именно на этом разрыве возникает основной массив замечаний.</p>
+						</div>
+
+						<div class="article__block">
+							<h3 class="article__subheading">Ключевая ошибка</h3>
+							<p class="article__highlight">
+								Лаборатория воспринимает подачу документов как «оформление системы». Хотя по факту это - демонстрация уже работающей системы
+							</p>
+							<h3 class="article__subheading">Что это вызывает</h3>
+							<p class="article__text-subtitle">На проверке выявляется:</p>
+							<ul class="article__list">
+								<li class="article__list-item">несоответствие между документами и практикой; </li>
+								<li class="article__list-item">невозможность подтвердить заявленные процессы;  </li>
+								<li class="article__list-item">неподтверждённая компетентность по заявленной области. </li>
+							</ul>
+							<p class="article__highlight">
+								Это сразу переводит замечания в категорию системных.
+							</p>
+						</div>
+					</section>
+
+					<hr class="article__divider">
+
+					<section class="article__section">
+						<h2 class="article__subtitle">Отдельный риск: пропуск сроков подачи заявки</h2>
+						<p class="article__text-subtitle">Ещё одна распространённая причина проблем — несвоевременная подача заявки на подтверждение компетентности или внесение изменений.
+На практике это выглядит как «организационная ошибка», но по факту это системное несоответствие.</p>
+						<div class="article__block">
+							<h3 class="article__subheading">Что происходит</h3>
+							<ul class="article__list">
+								<li class="article__list-item">не ведётся контроль сроков аккредитации; </li>
+								<li class="article__list-item">отсутствует планирование оценки компетентности; </li>
+								<li class="article__list-item">ответственность за подачу заявки не закреплена; </li>
+								<li class="article__list-item">документы начинают готовить в последний момент; </li>
+								<li class="article__list-item">лаборатория не успевает устранить несоответствия до подачи. </li>
+							</ul>
+							<p class="article__highlight">
+								В результате заявка подается с нарушением сроков или не подается вовсе.
+							</p>
+						</div>
+
+						<div class="article__block">
+							<h3 class="article__subheading">Почему это критично</h3>
+							<p class="article__highlight">
+								Органы по аккредитации рассматривают соблюдение сроков как грубое нарушение законодательства 
+							</p>
+							<p class="article__text-subtitle">В то же время если лаборатория не контролирует:</p>
+							<ul class="article__list">
+								<li class="article__list-item">сроки действия аккредитации; </li>
+								<li class="article__list-item">сроки подачи заявки; </li>
+								<li class="article__list-item">этапы подготовки. </li>
+							</ul>
+							<p class="article__text-subtitle">это означает отсутствие управляемости процессов.</p>
+						</div>
+
+						<div class="article__block">
+							<h3 class="article__subheading">Типичная ошибка в восприятии</h3>
+							<p class="article__text-subtitle">Лаборатория считает:«не успели подать — техническая проблема».На практике - это
+провал системы планирования и управления</p>
+						</div>
+
+						<div class="article__block">
+							<h3 class="article__subheading">К чему это приводит</h3>
+							<ul class="article__list">
+								<li class="article__list-item">риск приостановления или прекращения действия аккредитации; </li>
+								<li class="article__list-item">невозможность своевременно пройти оценку;</li>
+							</ul>
+
+						</div>
+
+					</section>
+
+					<hr class="article__divider">
+
+					<section class="article__section">
+						<h2 class="article__subtitle">Как это оценивается на проверке</h2>
+						<div class="article__block">
+							<h3 class="article__subheading">Орган по аккредитации оценивает не наличие документов, а:</h3>
+							<ul class="article__list">
+								<li class="article__list-item">как выполняются процессы; </li>
+								<li class="article__list-item">понимает ли персонал свои действия;  </li>
+								<li class="article__list-item">может ли лаборатория обосновать результат. </li>
+							</ul>
+							<p class="article__highlight">
+								Ключевой критерий:
+если результат нельзя объяснить — он считается недостоверным.
+							</p>
+						</div>
+
+						<div class="article__block">
+							<h3 class="article__subheading">Почему формальные корректирующие действия не работают</h3>
+							
+							<p class="article__text-subtitle">Типичная ошибка:</p>
+							<ul class="article__list">
+								<li class="article__list-item">выявлено несоответствие; </li>
+								<li class="article__list-item">оформлено корректирующее действие; </li>
+								<li class="article__list-item">причина не проанализирована; </li>
+								<li class="article__list-item">процесс не изменился.  </li>
+							</ul>
+							<p class="article__highlight">
+								С точки зрения ГОСТ ISO/IEC 17025 (п. 8.7)
+												это не устранение несоответствия и
+												 фиксация проблемы без решения
+							</p>
+						</div>
+
+						<div class="article__block">
+							<h3 class="article__subheading">Сигналы, что система не работает</h3>
+							<p class="article__text-subtitle">Есть ряд признаков, которые почти всегда приводят к эскалации:</p>
+							<ul class="article__list">
+								<li class="article__list-item">повторяющиеся замечания при проверках;  </li>
+								<li class="article__list-item">корректирующие действия «закрываются», но проблема остается; </li>
+								<li class="article__list-item">расхождения между документами и фактической работой;</li>
+								<li class="article__list-item">персонал не может объяснить, что делает и почему; </li>
+								<li class="article__list-item">результаты не сопровождаются обоснованием; </li>
+								<li class="article__list-item">участие в ППК не приводит к изменениям;  </li>
+								<li class="article__list-item">отсутствует контроль сроков подачи заявок; </li>
+								<li class="article__list-item">подготовка к оценке начинается в последний момент. </li>
+							</ul>
+							<p class="article__highlight">
+							Эти сигналы редко воспринимаются как критические внутри лаборатории,
+но именно они приводят к приостановлению аккредитации.
+						</p>
+						</div>
+
+						<div class="article__block">
+							<h3 class="article__subheading">Почему проблема глубже, чем кажется</h3>
+							<p class="article__text-subtitle">Частая ошибка — пытаться «исправить документы». На практике:</p>
+							<ul class="article__list">
+								<li class="article__list-item">документы уже есть;  </li>
+								<li class="article__list-item">проблема — в процессах; </li>
+								<li class="article__list-item">система не управляет качеством. </li>
+							</ul>
+							<p class="article__highlight">
+							В этом случае доработка документации не решает проблему.
+						</p>
+						</div>
+						<div class="article__block">
+							<h3 class="article__subheading">Как развивается ситуация</h3>
+							<p class="article__text-subtitle">Типовой сценарий:</p>
+							<ul class="article__list">
+								<li class="article__list-item">Подача документов без проверки реальной готовности; </li>
+								<li class="article__list-item">Появляются первые замечания;  </li>
+								<li class="article__list-item">Проводятся формальные корректирующие действия;  </li>
+								<li class="article__list-item">При следующей проверке замечания повторяются; </li>
+								<li class="article__list-item">Оценка становится более жёсткой;  </li>
+								<li class="article__list-item">фиксируются системные несоответствия. </li>
+							</ul>
+							<p class="article__highlight">
+							На этом этапе возникает риск приостановления.
+						</p>
+						</div>
+					</section>
+<hr class="article__divider">
+
+					<section class="article__section">
+						<h2 class="article__subtitle">Вывод</h2>
+						<div class="article__block">
+							<h3 class="article__subheading">Приостановление аккредитации — это не результат одной ошибки.
+Это следствие:</h3>
+							<ul class="article__list">
+								<li class="article__list-item">неработающей системы менеджмента;  </li>
+								<li class="article__list-item">отсутствия контроля процессов;</li>
+								<li class="article__list-item">формального подхода к корректирующим действиям;</li>
+								<li class="article__list-item">ошибок на этапе подачи документов;  </li>
+								<li class="article__list-item">отсутствия контроля сроков и планирования подачи заявок. </li>
+							</ul>
+						</div>
+						<div class="article__block">
+							<h3 class="article__subheading">Практический следующий шаг</h3>
+							<p class="article__text-subtitle">Если уже есть замечания (особенно повторяющиеся),
+необходимо оценить не документы, а систему:</p>
+							<ul class="article__list">
+								<li class="article__list-item">как выполняются процессы; </li>
+								<li class="article__list-item">где возникает разрыв; </li>
+								<li class="article__list-item">какие причины реально не устранены; </li>
+								<li class="article__list-item">соответствует ли поданная документация фактической работе; </li>
+								<li class="article__list-item">контролируются ли сроки подачи и этапы подготовки.</li>
+							</ul>
+							<a href="index.html#contact" class="article__button">
+							Разобрать реальные причины несоответствий до следующей проверки</a>
+						</div>
+						</section>
+				</article>
+			</div>
+		</main>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrapper">
+				<div class="logo-wrap">
+					<a href="index.html">
+						<img class="footer-logo" src="./img/logo-header.svg" alt="">
+					</a>
+				</div>
+
+				<div class="footer-contact">
+					<a class="footer-tel" href="tel:+375333709712">+375-33-370-97-12</a>
+					<div class="sotial">
+						<a href="#">
+							<img class="sotial-img" src="./img/icons/telegramm.svg" alt="">
+						</a>
+						<a href="#">
+							<img class="sotial-img" src="./img/icons/viber.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<a class="policy-privacy" href="privacy-policy.html">Политика конфиденциальности и Cookies</a>
+		</div>
+
+	</footer>
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
