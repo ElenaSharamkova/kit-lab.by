@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<header class="header header-bg">
+		<div class="container">
+			<div class="header-wrapper">
+				<a href="index.html" class="header-logo">
+					<img class="logo-img" src="./img/logo.png" alt="КИТ-лаб">
+				</a>
+				<button class="burger" id="burger" aria-label="Открыть меню">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="menu" id="menu">
+					<ul class="menu-list">
+						<li class="menu-item"><a href="index.html" class="menulink">Главная</a></li>
+						<li class="menu-item"><a href="index.html#about" class="menulink">О нас</a></li>
+						<li class="menu-item"><a href="index.html#area" class="menulink">Услуги</a></li>
+						<li class="menu-item"><a href="novosti.html" class="menulink">Статьи</a></li>
+						<li class="menu-item"><a href="index.html#contact" class="menulink">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="wrap">
+		<main class="main">
+			<div class="container">
+				<nav aria-label="breadcrumb" class="breadcrumb">
+					<ol>
+						<li><a href="index.html">главная</a></li>
+						<li><a href="novosti.html">статьи</a></li>
+						<li><span aria-current="page">Актуализация или расширение области аккредитации: ошибка, которая
+								переносит сроки на месяцы</span>
+						</li>
+					</ol>
+				</nav>
+				<article class="article">
+					<header class="article__header">
+						<h1 class="article__title">
+							Актуализация или расширение области аккредитации: ошибка, которая переносит сроки на месяцы
+						</h1>
+					</header>
+
+					<section class="article__section img-box">
+						<div class="article-img-wrap">
+							<p class="article__text">Одной из самых частых причин возврата заявок остаётся неправильный выбор
+								между актуализацией и расширением области аккредитации.
+							</p>
+							<p class="article__text">При этом проблема обычно возникает не из-за незнания процедуры. Ошибка
+								появляется на этапе оценки самих изменений, когда лаборатория считает, что работает в пределах
+								действующей области, хотя фактически уже выходит за её границы.
+							</p>
+							<p class="article__text">В результате документы подаются на актуализацию, а в ходе экспертизы
+								выясняется, что изменения требуют расширения области аккредитации.
+							</p>
+							<p class="article__text-subtitle">Именно здесь появляются:</p>
+							<ul class="article__list">
+								<li class="article__list-item">возвраты заявок;</li>
+								<li class="article__list-item">дополнительные запросы; </li>
+								<li class="article__list-item">повторная подача документов;</li>
+								<liю class="article__list-item">потеря нескольких месяцев по срокам. </li>
+							</ul>
+						</div>
+						<img class="article-img" src="img/news/5.jpg" alt="">
+					</section>
+
+					<section class="article__section">
+						<h2 class="article__subtitle">В чём принципиальная разница</h2>
+						<div class="article__block">
+							<h3 class="article__subheading">Актуализация области аккредитации</h3>
+
+							<p class="article__text-subtitle">Актуализация применяется в случаях, когда изменения происходят
+								внутри уже подтверждённой компетентности лаборатории. Обычно это связано с обновлением
+								нормативных документов, уточнением методики без изменения сути метода или корректировкой
+								параметров в пределах ранее подтверждённых возможностей.
+							</p>
+							<p class="article__text-subtitle">То есть лаборатория продолжает выполнять деятельность в тех же
+								границах, которые уже были оценены органом по аккредитации.</p>
+							<p class="article__highlight">Ключевой критерий — изменения не затрагивают пределы подтверждённой
+								компетентности.</p>
+						</div>
+
+						<hr class="article__divider">
+
+						<div class="article__block">
+							<h3 class="article__subheading">Расширение области аккредитации</h3>
+
+							<p class="article__text-subtitle">Расширение требуется тогда, когда лаборатория начинает выполнять
+								работы, ранее отсутствовавшие в области аккредитации.
+							</p>
+							<p class="article__text-subtitle">Речь может идти о внедрении новых методов, новых объектов
+								испытаний, изменении диапазонов измерений или использовании нового оборудования для иной области
+								применения.</p>
+							<p class="article__text-subtitle">В такой ситуации орган по аккредитации оценивает уже новую часть
+								деятельности лаборатории.</p>
+							<p class="article__highlight">Здесь необходимо повторное подтверждение компетентности.</p>
+						</div>
+
+						<hr class="article__divider">
+						<div class="article__block">
+							<h3 class="article__subheading">Почему возникает большинство ошибок</h3>
+
+							<p class="article__text-subtitle">На практике граница между двумя процедурами не всегда очевидна.
+
+								Особенно сложными становятся ситуации, когда изменения выглядят незначительными только
+								формально. Например, метод остаётся тем же по названию, но меняются условия применения,
+								диапазоны или объект испытаний.
+							</p>
+							<p class="article__text-subtitle">Часто ошибки возникают при:</p>
+							<ul class="article__list">
+								<li class="article__list-item">изменении диапазонов измерений;</li>
+								<li class="article__list-item">внедрении нового оборудования;</li>
+								<li class="article__list-item">добавлении нового объекта испытаний;</li>
+								<li class="article__list-item">корректировке методики;</li>
+								<li class="article__list-item">отсутствии анализа границ области аккредитации.</li>
+							</ul>
+							<p class="article__text-subtitle">В результате процедура выбирается по формальному признаку, а не
+								по фактическому изменению компетентности лаборатории.</p>
+						</div>
+
+						<hr class="article__divider">
+						<div class="article__block">
+							<h3 class="article__subheading">Что происходит после подачи заявки</h3>
+
+							<p class="article__text-subtitle">С переходом на работу через ЕИС последствия таких ошибок стали
+								особенно заметны.
+							</p>
+							<p class="article__text-subtitle">Обычно ситуация развивается одинаково: лаборатория подаёт
+								документы на актуализацию, после чего в ходе экспертизы выявляется, что изменения фактически
+								относятся к расширению области аккредитации. После этого начинается повторный цикл подготовки
+								документов.</p>
+							<p class="article__text-subtitle">Это означает:</p>
+							<ul class="article__list">
+								<li class="article__list-item">корректировку области аккредитации;</li>
+								<li class="article__list-item">подготовку дополнительных пояснений;</li>
+								<li class="article__list-item">изменение пакета документов;</li>
+								<li class="article__list-item">повторное рассмотрение заявки.</li>
+							</ul>
+						</div>
+
+						<hr class="article__divider">
+						<div class="article__block">
+							<h3 class="article__subheading">Сколько времени теряется</h3>
+
+							<p class="article__text-subtitle">Даже одна ошибка в выборе процедуры способна серьёзно сдвинуть
+								сроки.
+							</p>
+							<p class="article__text-subtitle">Возврат заявки обычно добавляет несколько недель. Затем
+								лаборатории требуется время на переработку области аккредитации, корректировку документов и
+								повторную подачу.</p>
+							<p class="article__text-subtitle">На практике подобная ошибка нередко увеличивает сроки на один–три
+								месяца.</p>
+							<p class="article__highlight">И чаще всего проблема обнаруживается уже после официальной подачи
+								документов.</p>
+						</div>
+						<hr class="article__divider">
+						<div class="article__block">
+							<h3 class="article__subheading">Почему это стало критично именно сейчас</h3>
+
+							<p class="article__text-subtitle">Изменения 2025–2026 годов сделали систему аккредитации более
+								гибкой, но одновременно повысили ответственность самой лаборатории.
+							</p>
+							<p class="article__text-subtitle">Теперь организация самостоятельно:</p>
+							<ul class="article__list">
+								<li class="article__list-item">определяет процедуру;</li>
+								<li class="article__list-item">оценивает характер изменений;</li>
+								<li class="article__list-item">обосновывает границы компетентности.
+								<li>
+							</ul>
+							<p class="article__text-subtitle">Орган по аккредитации больше не корректирует лабораторию во время
+								подготовки документов. Его задача — оценка уже принятого решения.</p>
+						</div>
+
+						<hr class="article__divider">
+						<div class="article__block">
+							<h3 class="article__subheading">Связь с ГОСТ ISO/IEC 17025</h3>
+
+							<p class="article__text-subtitle">Любые изменения должны быть обеспечены не только документально,
+								но и фактической готовностью лаборатории выполнять работы.
+							</p>
+							<p class="article__text-subtitle">Это касается:</p>
+							<ul class="article__list">
+								<li class="article__list-item">ресурсов и персонала;</li>
+								<li class="article__list-item">применимости методов;</li>
+								<li class="article__list-item">подтверждения качества результатов;</li>
+								<li class="article__list-item">системы менеджмента.</li>
+							</ul>
+							<p class="article__text-subtitle">Особенно важны требования раздела 6, пункта 7.2, пункта 7.7 и
+								раздела 8 ГОСТ ISO/IEC 17025.</p>
+							<p class="article__text-subtitle">Если изменения внедрены, но лаборатория не подтвердила
+								применимость метода, не оценила качество результатов или не обеспечила необходимые ресурсы, это
+								уже рассматривается как несоответствие независимо от выбранной процедуры.</p>
+						</div>
+						<hr class="article__divider">
+						<div class="article__block">
+							<h3 class="article__subheading">Как понять, что существует риск ошибки</h3>
+
+							<p class="article__text-subtitle">Обычно риск становится заметен ещё на этапе подготовки изменений.
+							</p>
+							<p class="article__text-subtitle">Особого внимания требуют ситуации, когда появляются сомнения в
+								выборе процедуры, изменяются диапазоны измерений, внедряется новое оборудование или отсутствует
+								чёткое техническое обоснование применимости метода.</p>
+							<p class="article__highlight">Если процедуру приходится дополнительно «объяснять», риск ошибки уже
+								высокий.</p>
+						</div>
+
+						<hr class="article__divider">
+						<div class="article__block">
+							<h3 class="article__subheading">Вывод</h3>
+
+							<p class="article__text-subtitle">Актуализация и расширение области аккредитации — это не
+								формальный выбор между двумя вариантами подачи документов.</p>
+							<p class="article__text-subtitle">Фактически лаборатория определяет:</p>
+							<ul class="article__list">
+								<li class="article__list-item">остаётся ли деятельность в пределах подтверждённой
+									компетентности;</li>
+								<li class="article__list-item">требуется ли повторное подтверждение возможностей;</li>
+								<li class="article__list-item">какая процедура соответствует характеру изменений.
+								<li>
+							</ul>
+							<p class="article__text-subtitle">Именно поэтому ошибка на этом этапе почти всегда приводит к
+								задержкам, возвратам и повторной подаче документов.</p>
+						</div>
+
+						<hr class="article__divider">
+						<div class="article__block">
+							<h3 class="article__subheading">Что важно сделать до подачи заявки</h3>
+
+							<p class="article__text-subtitle">Перед внесением изменений в область аккредитации необходимо
+								заранее определить характер изменений, оценить границы действующей области, проверить
+								применимость методик и подготовить обоснование выбранной процедуры.</p>
+							<p class="article__text-subtitle">Такой анализ занимает значительно меньше времени, чем исправление
+								ошибки после возврата заявки.</p>
+
+						</div>
+					</section>
+
+				</article>
+			</div>
+		</main>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrapper">
+				<div class="logo-wrap">
+					<a href="index.html">
+						<img class="footer-logo" src="./img/logo-header.svg" alt="">
+					</a>
+				</div>
+
+				<div class="footer-contact">
+					<a class="footer-tel" href="tel:+375445695688">+375-44-569-56-88</a>
+					<div class="sotial">
+						<a href="https://t.me/LabKonsalting" target="_blank">
+							<img class="sotial-img" src="./img/icons/telegramm.svg" alt="">
+						</a>
+						<a href="viber://chat?number=+375445695688" target="_blank">
+							<img class="sotial-img" src="./img/icons/viber.svg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<a class="policy-privacy" href="privacy-policy.html">Политика конфиденциальности и Cookies</a>
+		</div>
+
+	</footer>
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
