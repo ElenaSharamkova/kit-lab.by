@@ -1176,12 +1176,12 @@ margin-bottom: 16px;
  grid-template-columns: repeat(1, 1fr);
 }
 .story-box:first-child {
-	grid-column: span  1; 
+	grid-column: auto; 
 
 }
 .stoty-wrap:nth-child(2) {
-	grid-column: span  1; 
-  grid-row: span 1;
+	grid-column: auto; 
+  grid-row: auto;
 }
 .article__header {
 	text-align: center;
