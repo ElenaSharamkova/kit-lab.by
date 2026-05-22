@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollTop();
   initAccordion();
   initSlider();
+  initCookieBanner()
 });
 
 function initBurger() {
@@ -232,5 +233,33 @@ function initAccordion() {
         body.style.height = height;
       });
     }
+  });
+}
+
+// Cookie
+
+function initCookieBanner() {
+  const cookieBanner = document.querySelector(".cookie-banner");
+  const cookieBtn = document.querySelector(".cookie-btn");
+
+  if (!cookieBanner || !cookieBtn) return;
+
+  // Проверяем согласие
+  const isAccepted = localStorage.getItem("cookieAccepted");
+
+  // Если пользователь еще не принимал cookies
+  if (!isAccepted) {
+    cookieBanner.style.display = "flex";
+  }
+
+  // Кнопка подтверждения
+  cookieBtn.addEventListener("click", () => {
+    localStorage.setItem("cookieAccepted", "true");
+
+    cookieBanner.classList.add("hide");
+
+    setTimeout(() => {
+      cookieBanner.style.display = "none";
+    }, 300);
   });
 }
